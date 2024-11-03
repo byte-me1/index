@@ -6,7 +6,7 @@
     <title>Byte Me!</title>
     <link href="1icon.png" rel="icon" type="image/png" sizes="48x48" />
     <style>
-        @media (max-width: 700px) {
+        @media (max-width: 600px) {
             .container {
                 flex-direction: column;
 
@@ -16,7 +16,7 @@
             }
 
             .menu-section, .order-section {
-/*                 width: 100%;  */
+                width: 100%; 
                 padding: 10px;
             }
 
@@ -44,7 +44,12 @@
                 margin-top: 15px;
             }
 
+            h2 {
+                font-size: 1.2em; 
+            }
+
             .select-button {
+                font-size: 0.9em; 
                 padding: 5px; 
             }
         }
@@ -55,21 +60,20 @@
 
         body {
             font-family: Arial, sans-serif; 
-            padding-top: 80px;
+            margin: 20px;
+            padding: 20px;
             background-color: #FFE1FF;
+
+            justify-content: center;
+            text-align: center;
+            align-items: center;
         }
 
         header {
             background-color: #EE66A6;
             color: #fff;
-            padding: 5px;
+            padding: 10px;
             text-align: center;
-
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 10;
         }
 
         .header-title {
@@ -88,42 +92,25 @@
 
 
         .header-links {
-/*             text-align: center; */
-            margin: 15px;
+            text-align: center;
+            margin: 10px;
         }
 
 
         .header-links a {
             color: #fff;
             text-decoration: none;
-          
             margin: 0 15px;
             padding: 5px 10px;
-            border-radius: 10px;
-            border: none;
+            border-radius: 20px;
             background-color: #D91656;
         }
 
 
-        /* Language selection dropdown */
         .language-selection {
-            position: absolute; /* Or 'fixed' if you want it to stay on screen */
-            top: 20px; /* Adjust based on where you want it to appear */
-            right: 20px;
-            z-index: 20; /* Higher than header and order-section */
-            background-color: #fff;
-            padding: 5px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            color: #333;
-        }
-
-
-
-        /*.language-selection {
-            margin: 15px;
+            margin: 10px;
             text-align: right;
-        }*/
+        }
 
 
         .container {
@@ -133,18 +120,13 @@
 
 
         .menu-section {
-            width: 85%;
+            width: 70%;
             padding: 20px;
-/*              padding: 10px; */
         }
 
 
         .category {
-            margin-bottom: 25px;
-
-            justify-content: center;
-            text-align: center;
-            align-items: center;
+            margin-bottom: 20px;
         }
 
 
@@ -157,7 +139,7 @@
 
         .menu-item {
             display: inline-block;
-            width: 35%;
+            width: 30%;
             padding: 10px;
             margin: 10px;
             border: 1px solid #D91656;
@@ -165,12 +147,11 @@
             text-align: center;
         }
 
-
         .menu-item img {
-            max-width: 80px;
-/*             height: auto; */
-/*             width: 70px; */
-            height: 90px;
+            max-width: 100%;
+/*            height: auto;*/
+            width: 70px;
+            height: 100px;
         }
 
 
@@ -186,32 +167,11 @@
 
 
         .order-section {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%; /* or adjust width as needed */
-            height: 150px; /* Fixed height to maintain consistent size */
+            width: 25%;
             padding: 20px;
             background-color: #EE66A6;
-            color: #fff;
-            text-align: center;
-            overflow-y: auto; /* Enables scrolling within the section */
-            z-index: 10;
+            border-left: 1px solid #EE66A6;
         }
-
-        /* Main content padding to avoid overlapping the order-section */
-        .main-content {
-            padding-bottom: 180px; /* Adjust based on the height of order-section */
-        }
-
-
-        /*.order-section {
-            text-align: left;
-            width: 50%;
-            padding: 20px;
-            background-color: #EE66A6;
-/*            border-left: 1px solid #EE66A6;*/
-/*        }*/
 
 
         .order-section h3 {
@@ -220,27 +180,19 @@
             color: white;
             padding: 10px;
             border-radius: 10px ;
-
-             /*underline*/
-            border-bottom: 1px solid #ddd;
         }
 
 
 
         .order-list {
             list-style-type: none;
-            padding: 1px;
-
-
-
-            /*underline*/
-            border-bottom: 1px solid #ddd;
+            padding: 0;
         }
 
 
         .order-list li {
             padding: 10px;
-/*            border-bottom: 1px solid #ddd;*/
+            border-bottom: 1px solid #ddd;
         }
 
 
@@ -268,7 +220,7 @@
     </header>
        
 
-    <div class="language-selection">
+      <div class="language-selection">
         <label for="language">Choose Language:</label>
         <select id="language" onchange="changeLanguage()">
             <option value="english">English</option>
@@ -302,9 +254,9 @@
                 </div>
                 <div class="menu-item">
                     <img src="noodle4.png" alt="Noodle Dish">
-                    <p class="name">Chicken Noodles</p>
+                    <p class="name">Chicken Noodle</p>
                     <p class="price">50 THB</p>
-                    <button onclick="addToOrder('Chicken Noodles', 50)" class="select-button">Select</button>
+                    <button onclick="addToOrder('Chicken Noodle', 50)" class="select-button">Select</button>
                 </div>
                 <div class="menu-item">
                     <img src="noodle5.png" alt="Noodle Dish">
@@ -327,9 +279,9 @@
                 <h2 class="rice-title">Food</h2>
                 <div class="menu-item">
                     <img src="food1.png" alt="Rice Dish">
-                    <p class="name">Pork Sticky Rice</p>
+                    <p class="name">Pork Stick Rice</p>
                     <p class="price"><h5></h5>50 THB</p>
-                    <button onclick="addToOrder('Pork Sticky Rice', 50)" class="select-button">Select</button>
+                    <button onclick="addToOrder('Pork Stick Rice', 50)" class="select-button">Select</button>
                 </div>
 
                 <div class="menu-item">
@@ -379,25 +331,19 @@
                     <p class="name">Water</p>
                     <p class="price">10 THB</p>
                     <button onclick="addToOrder('Water', 10)" class="select-button">Select</button>
-                </div> 
-                
-                
+                </div>
                 <div class="menu-item">
                     <img src="drink2.png" alt="Drink">
-                    <p class="name">Cola</p>
+                    <p class="name">Coca Cola</p>
                     <p class="price">26 THB</p>
-                    <button onclick="addToOrder('Cola', 26)" class="select-button">Select</button>
+                    <button onclick="addToOrder('Coca Cola', 26)" class="select-button">Select</button>
                 </div>
-                
-                
                 <div class="menu-item">
                     <img src="drink3.png" alt="Drink">
                     <p class="name">Pepsi</p>
                     <p class="price">26 THB</p>
                     <button onclick="addToOrder('Pepsi', 26)" class="select-button">Select</button>
                 </div>
-
-
                 <div class="menu-item">
                     <img src="drink4.png" alt="Drink">
                     <p class="name">Thai Tea</p>
@@ -407,17 +353,13 @@
             </div>
         </div>
 
-
-
         <!-- Your menu and order sections here -->
         <div class="order-section">
             <h3 class="order-title">Your Order</h3>
             <ul id="order-list" class="order-list"></ul>
             <p class="total-items">Total Items: <span id="total-items">0</span></p>
             <p class="total-amount">Total Amount: <span id="total-amount">0</span> THB</p>
-            <center>
-                <button onclick="placeOrder()" class="place-order-button">Place Order</button>
-            </center>  
+            <button onclick="placeOrder()" class="place-order-button">Place Order</button>
         </div>
     </div>
 
@@ -500,7 +442,7 @@
                     "Pad Thai": "Pad Thai",
                     "Kuay Teow": "Kuay Teow",
                     "Kuay Teow Tom Yum": "Kuay Teow Tom Yum",
-                    "Chicken Noodles": "Chicken Noodles",
+                    "Chicken Noodle": "Chicken Noodle",
                     "Pork Noodle": "Pork Noodle",
                     "Boat Noodle": "Boat Noodle",
                     "Noodles": "Noodles",
@@ -510,13 +452,13 @@
                     "Mango Sticky Rice": "Mango Sticky Rice",
                     "Green Curry": "Green Curry",
                     "Tom Yum Kung": "Tom Yum Kung",
-                    "Pork Sticky Rice": "Pork Sticky Rice",
+                    "Pork Stick Rice": "Pork Stick Rice",
                     "Papaya Salad": "Papaya Salad",
                     "Food": "Food",
 
 
                     "Water": "Water",
-                    "Cola": "Cola",
+                    "Coca Cola": "Coca Cola",
                     "Pepsi": "Pepsi",
                     "Thai Tea": "Thai Tea",
                     "Drinks": "Drinks",
@@ -534,7 +476,7 @@
                     "Pad Thai": "ผัดไทย",
                     "Kuay Teow": "ก๋วยเตี๋ยว",
                     "Kuay Teow Tom Yum": "ก๋วยเตี๋ยวต้มยำ",
-                    "Chicken Noodles": "ก๋วยเตี๋ยวไก่",
+                    "Chicken Noodle": "ก๋วยเตี๋ยวไก่",
                     "Pork Noodle": "ก๋วยเตี๋ยวหมู",
                     "Boat Noodle": "ก๋วยเตี๋ยวเรือ",
                     "Noodles": "ก๋วยเตี๋ยว",
@@ -544,13 +486,13 @@
                     "Mango Sticky Rice": "ข้าวเหนียวมะม่วง",
                     "Green Curry": "แกงเขียวหวาน",
                     "Tom Yum Kung": "ต้มยำกุ้ง",
-                    "Pork Sticky Rice": "ข้าวหมูปิ้ง",
+                    "Pork Stick Rice": "ข้าวหมูปิ้ง",
                     "Papaya Salad": "ส้มตำ",
                     "Food": "อาหาร",
 
 
                     "Water": "น้ำ",
-                    "Cola": "โค้ก",
+                    "Coca Cola": "โค้ก",
                     "Pepsi": "เป๊ปซี่",
                     "Thai Tea": "ชาไทย",
                     "Drinks": "เครื่องดื่ม",
@@ -633,7 +575,7 @@
                 "Pad Thai": language === "thai" ? "ผัดไทย" : "Pad Thai",
                 "Kuay Teow": language === "thai" ? "ก๋วยเตี๋ยว" : "Kuay Teow",
                 "Kuay Teow Tom Yum": language === "thai" ? "ก๋วยเตี๋ยวต้มยำ" : "Kuay Teow Tom Yum",
-                "Chicken Noodles": language === "thai" ? "ก๋วยเตี๋ยวไก่" : "Chicken Noodles",
+                "Chicken Noodle": language === "thai" ? "ก๋วยเตี๋ยวไก่" : "Chicken Noodle",
                 "Pork Noodle": language === "thai" ? "ก๋วยเตี๋ยวหมู" : "Pork Noodle",
                 "Boat Noodle": language === "thai" ? "ก๋วยเตี๋ยวเรือ" : "Boat Noodle",
 
@@ -642,12 +584,12 @@
                 "Mango Sticky Rice": language === "thai" ? "ข้าวเหนียวมะม่วง" : "Mango Sticky Rice",
                 "Green Curry": language === "thai" ? "แกงเขียวหวาน" : "Green Curry",
                 "Tom Yum Kung": language === "thai" ? "ต้มยำกุ้ง" : "Tom Yum Kung",
-                "Pork Sticky Rice": language === "thai" ? "ข้าวหมูปิ้ง" : "Pork Sticky Rice",
+                "Pork Stick Rice": language === "thai" ? "ข้าวหมูปิ้ง" : "Pork Stick Rice",
                 "Papaya Salad": language === "thai" ? "ส้มตำ" : "Papaya Salad",
 
 
                 "Water": language === "thai" ? "น้ำ" : "Water",
-                "Cola": language === "thai" ? "โค้ก" : "Cola",
+                "Coca Cola": language === "thai" ? "โค้ก" : "Coca Cola",
                 "Pepsi": language === "thai" ? "เป๊ปซี่" : "Pepsi",
                 "Thai Tea": language === "thai" ? "ชาไทย" : "Thai Tea"
             };
