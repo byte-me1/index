@@ -105,10 +105,25 @@
         }
 
 
+        /* Language selection dropdown */
         .language-selection {
+            position: absolute; /* Or 'fixed' if you want it to stay on screen */
+            top: 20px; /* Adjust based on where you want it to appear */
+            right: 20px;
+            z-index: 20; /* Higher than header and order-section */
+            background-color: #fff;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            color: #333;
+        }
+
+
+
+        /*.language-selection {
             margin: 15px;
             text-align: right;
-        }
+        }*/
 
 
         .container {
@@ -174,17 +189,19 @@
             position: fixed;
             bottom: 0;
             left: 0;
-            width: 100%; /* Adjust width as desired, or use a smaller width if it shouldn't span full page */
+            width: 100%; /* or adjust width as needed */
+            height: 150px; /* Fixed height to maintain consistent size */
             padding: 20px;
             background-color: #EE66A6;
             color: #fff;
             text-align: center;
-            z-index: 10; /* Keeps it above other content */
+            overflow-y: auto; /* Enables scrolling within the section */
+            z-index: 10;
         }
 
-        /* Adjust main content to avoid overlapping the order-section */
+        /* Main content padding to avoid overlapping the order-section */
         .main-content {
-            padding-bottom: 100px; /* Adjust based on the order-section height */
+            padding-bottom: 180px; /* Adjust based on the height of order-section */
         }
 
 
