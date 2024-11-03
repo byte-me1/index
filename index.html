@@ -55,13 +55,8 @@
 
         body {
             font-family: Arial, sans-serif; 
-/*             margin: 10px;
-            padding: 10px; */
+            padding-top: 80px;
             background-color: #FFE1FF;
-
-            /*justify-content: center;
-            text-align: center;
-            align-items: center;*/
         }
 
         header {
@@ -69,6 +64,12 @@
             color: #fff;
             padding: 5px;
             text-align: center;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
         }
 
         .header-title {
@@ -170,12 +171,24 @@
 
 
         .order-section {
+            position: fixed;
+            top: 80px; /* Adjust based on header height */
+            right: 0;
+            width: 20%; /* Adjust width to fit your layout */
+            height: calc(100vh - 80px); /* Full viewport height minus header height */
+            padding: 20px;
+            background-color: #EE66A6;
+            overflow-y: auto; /* Enable scrolling within the order section if content overflows */
+        }
+
+
+        /*.order-section {
             text-align: left;
             width: 50%;
             padding: 20px;
             background-color: #EE66A6;
 /*            border-left: 1px solid #EE66A6;*/
-        }
+/*        }*/
 
 
         .order-section h3 {
