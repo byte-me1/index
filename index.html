@@ -578,7 +578,7 @@
 
                 const plusButton = document.createElement('button');
                 plusButton.textContent = '+';
-                plusButton.style.marginLeft = "5px"; // Space from minus button
+                plusButton.style.marginLeft = "3px"; // Space from minus button
                 plusButton.style.cursor = "pointer";
                 plusButton.onclick = function() {
                     updateItemQuantity(item, 1); // Increase quantity
@@ -597,7 +597,7 @@
             totalAmount.textContent = totalPrice;
         }
 
-        
+
 
         function updateItemQuantity(item, change) {
             if (order[item]) {
