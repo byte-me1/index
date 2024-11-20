@@ -280,9 +280,9 @@
             cursor: pointer;
         }
 
-        button:hover {
+       /* button:hover {
             background-color: #e0e0e0;
-        }
+        }*/
 
 
 
@@ -570,7 +570,7 @@
                 // Create plus and minus buttons
                 const minusButton = document.createElement('button');
                 minusButton.textContent = '-';
-                minusButton.style.marginLeft = "5px"; // Space from text
+                // minusButton.style.marginLeft = "5px"; // Space from text
                 minusButton.style.cursor = "pointer";
                 minusButton.onclick = function() {
                     updateItemQuantity(item, -1); // Decrease quantity
@@ -773,6 +773,9 @@
             };
             return translations[item];
         }
+
+
+
 
         // Set event listener for language change
         document.getElementById('language').addEventListener('change', changeLanguage);
