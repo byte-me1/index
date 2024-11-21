@@ -557,7 +557,6 @@
                 itemCount += quantity;
                 totalPrice += price * quantity;
 
-                
                 // Translate ordered item for display
                 const translatedItem = translateMenuItem(item);
                 const listItem = document.createElement('li');
@@ -565,26 +564,7 @@
                 listItem.style.alignItems = "center";
                 listItem.style.justifyContent = "space-between"; // Space between item and icon
 
-
-// ////////
-                listItem.style.padding = "8px 0"; 
-
-////////
-                // Text section
-                const textContainer = document.createElement('div');
-                textContainer.style.flex = "1"; // Allow text to take up remaining space
-                textContainer.style.minWidth = "200px"; // Ensure a consistent width for text
-                textContainer.textContent = `${index + 1}. ${translatedItem} - ${quantity} x ${price} THB`;
-
-
                 listItem.innerHTML = `${index + 1}. ${translatedItem} - ${quantity} x ${price} THB`;
-
-
-                 // Icon container
-                const iconContainer = document.createElement('div');
-                iconContainer.style.display = 'flex';
-                iconContainer.style.alignItems = 'center';
-                iconContainer.style.gap = '5px'; // Uniform spacing between icons
 
 
                 // Create plus and minus buttons
@@ -598,22 +578,11 @@
 
                 const plusButton = document.createElement('button');
                 plusButton.textContent = '+';
-                plusButton.style.marginLeft = "3px"; // Space from minus button
+                // plusButton.style.marginLeft = "1px"; // Space from minus button
                 plusButton.style.cursor = "pointer";
                 plusButton.onclick = function() {
                     updateItemQuantity(item, 1); // Increase quantity
                 };
-
-
-                // Create the minus icon
-                const minusIcon = document.createElement('i');
-                minusIcon.classList.add('fas', 'fa-minus'); // Font Awesome minus icon
-                minusIcon.style.cursor = 'pointer';
-
-                // Create the plus icon
-                const plusIcon = document.createElement('i');
-                plusIcon.classList.add('fas', 'fa-plus'); // Font Awesome plus icon
-                plusIcon.style.cursor = 'pointer';
 
                 // Append buttons to the list item
                 listItem.appendChild(minusButton);
