@@ -275,7 +275,7 @@
         button {
             background-color: #f0f0f0;
             border: 1px solid #ccc;
-            padding: 5px 10px;
+/*             padding: 5px 10px; */
             font-size: 16px;
             cursor: pointer;
         }
@@ -578,7 +578,7 @@
 
                 const plusButton = document.createElement('button');
                 plusButton.textContent = '+';
-                plusButton.style.marginLeft = "1px"; // Space from minus button
+                // plusButton.style.marginLeft = "1px"; // Space from minus button
                 plusButton.style.cursor = "pointer";
                 plusButton.onclick = function() {
                     updateItemQuantity(item, 1); // Increase quantity
